@@ -21,10 +21,15 @@ const Styles = styled.div`
     }
 
     .jumbotron h1 {
-        border: 2px solid white;
+        max-width: 520px;
+        margin: auto;
+        border-right: 1px solid white;
         overflow: hidden;
         white-space: nowrap;
-        animation: show-title 2s;
+        animation: show-title 5s steps(40), typing-cursor 1s infinite;
+
+        animation: ;
+        padding: 5px;
     }
 
     .profilePic {
@@ -63,11 +68,15 @@ const Styles = styled.div`
     @keyframes show-title {
         from {
             width: 0%;
-            text-align: center;
         }
         to {
             width: 100%;
-            text-align: center;
+        }
+    }
+
+    @keyframes typing-cursor {
+        50% {
+            border-color: transparent;
         }
     }
 `
@@ -77,10 +86,8 @@ export default class Home extends Component {
         return (
             <React.Fragment>
                 <Styles>
-                    <Jumbotron className="jumbotron-style">
-                        <div>
-                            ><h1>This is Parker's Home Page!</h1>
-                        </div>
+                    <Jumbotron>
+                        <h1>This is Parker's Home Page!</h1>
                         <p>Leave a message if you like!</p>
                         <hr className="my-5" />
                         <Row>
@@ -96,6 +103,7 @@ export default class Home extends Component {
                             </Col>
                         </Row>
                     </Jumbotron>
+
                     <Image src={profileImg} className="profilePic" />
                     <div className="banner">
                         <h2>HKUST Student</h2>
@@ -106,6 +114,9 @@ export default class Home extends Component {
                         <p>React / React Native / Javascript / SQL / MongoDB</p>
                         <br />
                         <div className="social-col">
+                            <a href="mailto:parkers116@gmail.com">
+                                <i class="fas fa-envelope-square" />{' '}
+                            </a>
                             <a href="https://www.linkedin.com/in/parkersuen/">
                                 <i class="fab fa-linkedin" />
                             </a>

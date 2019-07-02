@@ -19,6 +19,7 @@ const Styles = styled.div`
         #fd1d1d,
         #833ab4
     ); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    display: block;
     animation: show-content 1s;
     @keyframes show-content {
         from {
@@ -27,6 +28,23 @@ const Styles = styled.div`
         to {
             opacity: 1;
         }
+    }
+
+    @keyframes show-title {
+        from {
+            width: 0%;
+        }
+        to {
+            width: 100%;
+        }
+    }
+    .test {
+        max-width: 200px;
+        margin: auto;
+        text-align: center;
+        overflow: hidden;
+        white-space: nowrap;
+        animation: show-title 2s;
     }
 `
 
@@ -45,6 +63,9 @@ class App extends Component {
                         </Switch>
                     </Router>
                 </Container>
+                <div className="test">
+                    <h1>TESTING</h1>
+                </div>
                 <Footer />
             </Styles>
         )
