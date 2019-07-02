@@ -2,7 +2,7 @@ import React, { Component } from 'react'
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom'
 import { Container } from 'react-bootstrap'
 import Home from './components/Home'
-import About from './About'
+import About from './components/About'
 import Contact from './components/Contact'
 import NotMatch from './components/NotMatch'
 
@@ -19,6 +19,15 @@ const Styles = styled.div`
         #fd1d1d,
         #833ab4
     ); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    animation: show-content 1s;
+    @keyframes show-content {
+        from {
+            opacity: 0;
+        }
+        to {
+            opacity: 1;
+        }
+    }
 `
 
 class App extends Component {

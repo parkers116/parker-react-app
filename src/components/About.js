@@ -39,6 +39,7 @@ export default class About extends Component {
                     <br />
                     <hr className="line" />
                     <h1>Projects</h1>
+                    <br />
                     <h5>Computers:</h5>
                     <p2>Cryptocurrency Trading Suggestion System (FYP) | React Native/MongoDB/Python</p2>
                     <br />

@@ -29,7 +29,7 @@ export default class NavigationBar extends Component {
         return (
             <Styles>
                 <Navbar expand="lg">
-                    <Navbar.Brand href="/">Write What You Like</Navbar.Brand>
+                    <Navbar.Brand href="/">Parker Suen</Navbar.Brand>
                     <Navbar.Toggle aria-controls="basic-navbar-nav" />
                     <Navbar.Collapse id="basic-navbar-nav">
                         <Nav className="ml-auto">

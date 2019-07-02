@@ -20,6 +20,13 @@ const Styles = styled.div`
         border-radius: 20px;
     }
 
+    .jumbotron h1 {
+        border: 2px solid white;
+        overflow: hidden;
+        white-space: nowrap;
+        animation: show-title 2s;
+    }
+
     .profilePic {
         height: auto;
         width: 30%;
@@ -48,8 +55,20 @@ const Styles = styled.div`
         width: 30%;
         margin: auto;
     }
+
     .social-col i {
         font-size: 3em;
+    }
+
+    @keyframes show-title {
+        from {
+            width: 0%;
+            text-align: center;
+        }
+        to {
+            width: 100%;
+            text-align: center;
+        }
     }
 `
 
@@ -59,7 +78,9 @@ export default class Home extends Component {
             <React.Fragment>
                 <Styles>
                     <Jumbotron className="jumbotron-style">
-                        <h1>This is Parker's Home Page!</h1>
+                        <div>
+                            ><h1>This is Parker's Home Page!</h1>
+                        </div>
                         <p>Leave a message if you like!</p>
                         <hr className="my-5" />
                         <Row>
