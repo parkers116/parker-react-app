@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
 import { Nav, Navbar } from 'react-bootstrap'
-import { NavLink } from 'react-router-dom'
+import { Link } from 'react-router-dom'
 import styled from 'styled-components'
 
 const Styles = styled.div`
@@ -41,19 +41,21 @@ export default class NavigationBar extends Component {
         return (
             <Styles>
                 <Navbar expand="lg">
-                    <Navbar.Brand href="/">Parker Suen</Navbar.Brand>
+                    <Link to="/">
+                        <Navbar.Brand>Parker Suen</Navbar.Brand>
+                    </Link>
                     <Navbar.Toggle aria-controls="basic-navbar-nav" />
                     <Navbar.Collapse id="basic-navbar-nav">
                         <Nav className="ml-auto">
-                            <NavLink className="navlink" to="/">
+                            <Link className="navlink" to="/">
                                 Home
-                            </NavLink>
-                            <NavLink className="navlink" to="/about">
+                            </Link>
+                            <Link className="navlink" to="/about">
                                 About
-                            </NavLink>
-                            <NavLink className="navlink" to="/contact">
+                            </Link>
+                            <Link className="navlink" to="/contact">
                                 Contact
-                            </NavLink>
+                            </Link>
                         </Nav>
                     </Navbar.Collapse>
                 </Navbar>

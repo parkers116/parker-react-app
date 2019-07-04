@@ -1,6 +1,7 @@
 import React, { Component } from 'react'
 import { Row, Col, Badge, Image, Jumbotron, Button } from 'react-bootstrap'
 import styled from 'styled-components'
+import { Link } from 'react-router-dom'
 import jumboImage from '../assets/bk.jpg'
 import profileImg from '../assets/icon.svg'
 import '../../node_modules/@fortawesome/fontawesome-free/css/all.css'
@@ -92,14 +93,14 @@ export default class Home extends Component {
                         <hr className="my-5" />
                         <Row>
                             <Col>
-                                <Button variant="light" class="" href="/about">
-                                    About me
-                                </Button>
+                                <Link to="/about">
+                                    <Button variant="light">About me</Button>
+                                </Link>
                             </Col>
                             <Col>
-                                <Button variant="light" href="/">
-                                    Leave a message
-                                </Button>
+                                <Link to="/">
+                                    <Button variant="light">Leave a message</Button>
+                                </Link>
                             </Col>
                         </Row>
                     </Jumbotron>
