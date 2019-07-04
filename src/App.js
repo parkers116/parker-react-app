@@ -38,14 +38,6 @@ const Styles = styled.div`
             width: 100%;
         }
     }
-    .test {
-        max-width: 200px;
-        margin: auto;
-        text-align: center;
-        overflow: hidden;
-        white-space: nowrap;
-        animation: show-title 2s;
-    }
 `
 
 class App extends Component {
@@ -63,9 +55,6 @@ class App extends Component {
                         </Switch>
                     </Router>
                 </Container>
-                <div className="test">
-                    <h1>TESTING</h1>
-                </div>
                 <Footer />
             </Styles>
         )

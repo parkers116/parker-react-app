@@ -45,6 +45,8 @@ export default class About extends Component {
                     <br />
                     <p2>SVG Web Games | HTML/Javascript</p2>
                     <br />
+                    <p2>Multimedia Web Applications (MIDI/Audio/Image/Video) | HTML/Javascript</p2>
+                    <br />
                     <br />
                     <h5>Electronics:</h5>
                     <p2>Wireless Electronic Vehicle | STM32/C++</p2>
