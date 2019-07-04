@@ -29,8 +29,12 @@ const Styles = styled.div`
         white-space: nowrap;
         animation: show-title 5s steps(40), typing-cursor 1s infinite;
         padding: 5px;
+    }
+
+    .title {
         @media screen and (max-width: 500px) {
-            font-size: 30px;
+            font-size: 17px;
+            font-weight: bold;
         }
     }
 
@@ -90,7 +94,7 @@ export default class Home extends Component {
                     <Jumbotron>
                         <Row>
                             <Col>
-                                <h1>This is Parker's Home Page!</h1>
+                                <h1 className="title">This is Parker's Home Page!</h1>
                             </Col>
                         </Row>
                         <p>Leave a message if you like!</p>
@@ -111,7 +115,7 @@ export default class Home extends Component {
 
                     <Image src={profileImg} className="profilePic" />
                     <div className="banner">
-                        <h2>HKUST Student</h2>
+                        <h2 className="title">HKUST Student</h2>
                         <p>
                             BEng in Computer Engineering <Badge variant="danger">Fresh Graduate</Badge>
                         </p>

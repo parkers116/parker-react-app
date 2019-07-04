@@ -22,6 +22,14 @@ const Styles = styled.div`
     .line {
         border-top: 2px solid white;
     }
+
+    .title {
+        padding: 20px;
+        @media screen and (max-width: 500px) {
+            font-size: 28px;
+            font-weight: bold;
+        }
+    }
 `
 
 export default class About extends Component {
@@ -29,8 +37,7 @@ export default class About extends Component {
         return (
             <Styles>
                 <div className="info-box">
-                    <h1>Education</h1>
-                    <br />
+                    <h1 className="title">Education</h1>
                     <p1>2015-2019 | HKUST</p1>
                     <br />
                     <p2>BEng in Computer Engineering</p2>
@@ -42,8 +49,7 @@ export default class About extends Component {
                     <br />
                     <br />
                     <hr className="line" />
-                    <h1>Projects</h1>
-                    <br />
+                    <h1 className="title">Projects</h1>
                     <h5>Computers:</h5>
                     <p2>Cryptocurrency Trading Suggestion System (FYP) | React Native/MongoDB/Python</p2>
                     <br />
