@@ -1,0 +1,20 @@
+{
+  "files": {
+    "main.css": "/parker-react-app/static/css/main.34de6062.chunk.css",
+    "main.js": "/parker-react-app/static/js/main.b1566b36.chunk.js",
+    "main.js.map": "/parker-react-app/static/js/main.b1566b36.chunk.js.map",
+    "runtime~main.js": "/parker-react-app/static/js/runtime~main.d7f5830d.js",
+    "runtime~main.js.map": "/parker-react-app/static/js/runtime~main.d7f5830d.js.map",
+    "static/css/2.85c55ab2.chunk.css": "/parker-react-app/static/css/2.85c55ab2.chunk.css",
+    "static/js/2.727f88d2.chunk.js": "/parker-react-app/static/js/2.727f88d2.chunk.js",
+    "static/js/2.727f88d2.chunk.js.map": "/parker-react-app/static/js/2.727f88d2.chunk.js.map",
+    "index.html": "/parker-react-app/index.html",
+    "precache-manifest.ce4efab2ce90658bd414ca8dcbd1a6e1.js": "/parker-react-app/precache-manifest.ce4efab2ce90658bd414ca8dcbd1a6e1.js",
+    "service-worker.js": "/parker-react-app/service-worker.js",
+    "static/css/2.85c55ab2.chunk.css.map": "/parker-react-app/static/css/2.85c55ab2.chunk.css.map",
+    "static/css/main.34de6062.chunk.css.map": "/parker-react-app/static/css/main.34de6062.chunk.css.map",
+    "static/media/bk.jpg": "/parker-react-app/static/media/bk.d1b050cc.jpg",
+    "static/media/all.css": "/parker-react-app/static/media/fa-solid-900.ef3df984.eot",
+    "static/media/icon.svg": "/parker-react-app/static/media/icon.ebafbc76.svg"
+  }
+}
