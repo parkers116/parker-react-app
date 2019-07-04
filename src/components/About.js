@@ -13,6 +13,10 @@ const Styles = styled.div`
         color: white;
         padding: 40px;
         text-align: center;
+
+        @media screen and (max-width: 500px) {
+            width: 100%;
+        }
     }
 
     .line {

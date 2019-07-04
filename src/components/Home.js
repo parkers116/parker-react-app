@@ -28,9 +28,10 @@ const Styles = styled.div`
         overflow: hidden;
         white-space: nowrap;
         animation: show-title 5s steps(40), typing-cursor 1s infinite;
-
-        animation: ;
         padding: 5px;
+        @media screen and (max-width: 500px) {
+            font-size: 30px;
+        }
     }
 
     .profilePic {
@@ -56,10 +57,9 @@ const Styles = styled.div`
     }
 
     .social-col {
-        display: flex;
-        justify-content: space-between;
         width: 30%;
         margin: auto;
+        text-align: center;
     }
 
     .social-col i {
@@ -88,7 +88,11 @@ export default class Home extends Component {
             <React.Fragment>
                 <Styles>
                     <Jumbotron>
-                        <h1>This is Parker's Home Page!</h1>
+                        <Row>
+                            <Col>
+                                <h1>This is Parker's Home Page!</h1>
+                            </Col>
+                        </Row>
                         <p>Leave a message if you like!</p>
                         <hr className="my-5" />
                         <Row>
@@ -115,15 +119,23 @@ export default class Home extends Component {
                         <p>React / React Native / Javascript / SQL / MongoDB</p>
                         <br />
                         <div className="social-col">
-                            <a href="mailto:parkers116@gmail.com">
-                                <i class="fas fa-envelope-square" />{' '}
-                            </a>
-                            <a href="https://www.linkedin.com/in/parkersuen/">
-                                <i class="fab fa-linkedin" />
-                            </a>
-                            <a href="https://github.com/parkers116">
-                                <i class="fab fa-github-square" />
-                            </a>
+                            <Row>
+                                <Col>
+                                    <a href="mailto:parkers116@gmail.com">
+                                        <i class="fas fa-envelope-square" />{' '}
+                                    </a>
+                                </Col>
+                                <Col>
+                                    <a href="https://www.linkedin.com/in/parkersuen/">
+                                        <i class="fab fa-linkedin" />
+                                    </a>
+                                </Col>
+                                <Col>
+                                    <a href="https://github.com/parkers116">
+                                        <i class="fab fa-github-square" />
+                                    </a>
+                                </Col>
+                            </Row>
                         </div>
                     </div>
                     <br />
