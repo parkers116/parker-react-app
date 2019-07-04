@@ -1,5 +1,6 @@
 import React, { Component } from 'react'
 import { Nav, Navbar } from 'react-bootstrap'
+import { NavLink } from 'react-router-dom'
 import styled from 'styled-components'
 
 const Styles = styled.div`
@@ -15,8 +16,19 @@ const Styles = styled.div`
     }
 
     .navbar-brand,
-    .navbar-nav .nav-link {
+    .navbar-nav {
         color: white;
+
+        &:hover {
+            color: #bbb;
+        }
+    }
+
+    .navlink {
+        color: white;
+        padding-left: 10px;
+        padding-right: 10px;
+        text-decoration: none;
 
         &:hover {
             color: #bbb;
@@ -33,9 +45,15 @@ export default class NavigationBar extends Component {
                     <Navbar.Toggle aria-controls="basic-navbar-nav" />
                     <Navbar.Collapse id="basic-navbar-nav">
                         <Nav className="ml-auto">
-                            <Nav.Link href="/">Home</Nav.Link>
-                            <Nav.Link href="/about">About</Nav.Link>
-                            <Nav.Link href="/contact">Contact</Nav.Link>
+                            <NavLink className="navlink" to="/">
+                                Home
+                            </NavLink>
+                            <NavLink className="navlink" to="/about">
+                                About
+                            </NavLink>
+                            <NavLink className="navlink" to="/contact">
+                                Contact
+                            </NavLink>
                         </Nav>
                     </Navbar.Collapse>
                 </Navbar>

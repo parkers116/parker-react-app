@@ -11,7 +11,7 @@ const Styles = styled.div`
         margin-right: auto;
         border-radius: 30px;
         color: white;
-        padding: 20px;
+        padding: 40px;
         text-align: center;
     }
 
@@ -50,6 +50,7 @@ export default class About extends Component {
                     <br />
                     <h5>Electronics:</h5>
                     <p2>Wireless Electronic Vehicle | STM32/C++</p2>
+                    <br />
                     <br />
                 </div>
                 <br />

@@ -5,11 +5,18 @@ const Styles = styled.div`
     .social-col {
         display: flex;
         justify-content: space-between;
-        width: 30%;
+        width: 40%;
         margin: auto;
+        padding-top: 15%;
+        padding-bottom: 35%;
+        text-align: center;
     }
     .social-col i {
-        font-size: 5em;
+        font-size: 6em;
+    }
+
+    .social-col p {
+        font-size: 1.5em;
     }
 `
 
@@ -19,13 +26,19 @@ export default class Contact extends Component {
             <Styles>
                 <div className="social-col">
                     <a href="mailto:parkers116@gmail.com">
-                        <i class="fas fa-envelope-square" />{' '}
+                        <i class="fas fa-envelope-square" />
+                        <br />
+                        <p>Email</p>
                     </a>
                     <a href="https://www.linkedin.com/in/parkersuen/">
                         <i class="fab fa-linkedin" />
+                        <br />
+                        <p>Linkedin</p>
                     </a>
                     <a href="https://github.com/parkers116">
                         <i class="fab fa-github-square" />
+                        <br />
+                        <p>Github</p>
                     </a>
                 </div>
             </Styles>
