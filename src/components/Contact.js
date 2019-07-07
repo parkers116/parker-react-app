@@ -47,7 +47,6 @@ export default class Contact extends Component {
                             </a>
                         </Col>
                     </Row>
-                    >
                 </div>
             </Styles>
         )

@@ -35,6 +35,7 @@ const Styles = styled.div`
         @media screen and (max-width: 500px) {
             font-size: 17px;
             font-weight: bold;
+            max-width: 250px;
         }
     }
 
@@ -84,6 +85,99 @@ const Styles = styled.div`
             border-color: transparent;
         }
     }
+
+    .button {
+        position: relative;
+        overflow: hidden;
+    }
+
+    .button:hover span:nth-child(1) {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 3px;
+        background: linear-gradient(to left, #fcb045, #fd1d1d, #833ab4);
+        animation: button-animate1 2s linear infinite;
+    }
+
+    .button:hover span:nth-child(2) {
+        position: absolute;
+        top: 0;
+        right: 0;
+        width: 3px;
+        height: 100%;
+        background: linear-gradient(to top, #fcb045, #fd1d1d, #833ab4);
+        animation: button-animate2 2s linear infinite;
+    }
+
+    .button:hover span:nth-child(3) {
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        height: 3px;
+        background: linear-gradient(to right, #fcb045, #fd1d1d, #833ab4);
+        animation: button-animate3 2s linear infinite;
+    }
+
+    .button:hover span:nth-child(4) {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 3px;
+        height: 100%;
+        background: linear-gradient(to bottom, #fcb045, #fd1d1d, #833ab4);
+        animation: button-animate4 2s linear infinite;
+    }
+
+    @keyframes button-animate1 {
+        0% {
+            transform: translateX(-100%);
+        }
+        100% {
+            transform: translateX(100%);
+        }
+    }
+
+    @keyframes button-animate2 {
+        0% {
+            transform: translateY(0%);
+        }
+        50% {
+            transform: translateY(100%);
+        }
+        50.1% {
+            transform: translateY(-100%);
+        }
+        100% {
+            transform: translateY(0%);
+        }
+    }
+
+    @keyframes button-animate3 {
+        0% {
+            transform: translateX(100%);
+        }
+        100% {
+            transform: translateX(-100%);
+        }
+    }
+
+    @keyframes button-animate4 {
+        0% {
+            transform: translateY(0%);
+        }
+        50% {
+            transform: translateY(-100%);
+        }
+        50.1% {
+            transform: translateY(100%);
+        }
+        100% {
+            transform: translateY(0%);
+        }
+    }
 `
 
 export default class Home extends Component {
@@ -102,12 +196,24 @@ export default class Home extends Component {
                         <Row>
                             <Col>
                                 <Link to="/about">
-                                    <Button variant="light">About me</Button>
+                                    <Button variant="light" className="button">
+                                        <span />
+                                        <span />
+                                        <span />
+                                        <span />
+                                        About me
+                                    </Button>
                                 </Link>
                             </Col>
                             <Col>
                                 <Link to="/">
-                                    <Button variant="light">Leave a message</Button>
+                                    <Button variant="light" className="button">
+                                        <span />
+                                        <span />
+                                        <span />
+                                        <span />
+                                        Leave a message
+                                    </Button>
                                 </Link>
                             </Col>
                         </Row>
