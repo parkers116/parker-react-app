@@ -91,6 +91,12 @@ const Styles = styled.div`
         overflow: hidden;
     }
 
+    .button:hover {
+        background: #130f40;
+        color: white;
+        transition-duration: 0.5s;
+    }
+
     .button:hover span:nth-child(1) {
         position: absolute;
         top: 0;
@@ -206,7 +212,7 @@ export default class Home extends Component {
                                 </Link>
                             </Col>
                             <Col>
-                                <Link to="/">
+                                <a href="mailto:parkers116@gmail.com">
                                     <Button variant="light" className="button">
                                         <span />
                                         <span />
@@ -214,7 +220,7 @@ export default class Home extends Component {
                                         <span />
                                         Leave a message
                                     </Button>
-                                </Link>
+                                </a>
                             </Col>
                         </Row>
                     </Jumbotron>
