@@ -5,7 +5,7 @@ var MessageSchema = new Schema({
     userName: String,
     topic: String,
     msg: String,
-    time: { type: Date, default: Date.now },
+    date: { type: Date, default: Date.now },
 })
 
 MessageSchema.virtual('url').get(() => {

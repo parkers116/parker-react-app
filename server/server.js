@@ -3,7 +3,7 @@ const bodyParser = require('body-parser')
 const mongoose = require('mongoose')
 
 const app = express()
-const route = require('./routes/route')
+const route = require('./routes/messageRoute')
 
 // Middleware on express
 app.use(bodyParser.json())
