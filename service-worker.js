@@ -14,7 +14,7 @@
 importScripts("https://storage.googleapis.com/workbox-cdn/releases/4.3.1/workbox-sw.js");
 
 importScripts(
-  "/parker-react-app/precache-manifest.aa86683c0a6e52b4966367c519e89c6b.js"
+  "/parker-react-app/precache-manifest.5f9e60d3b178655ab661f7770eb42af9.js"
 );
 
 self.addEventListener('message', (event) => {
