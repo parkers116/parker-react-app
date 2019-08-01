@@ -92,7 +92,7 @@ const Styles = styled.div`
     }
 
     .button:hover {
-        background: #130f40;
+        background: #576574;
         color: white;
         transition-duration: 0.5s;
     }
@@ -212,7 +212,7 @@ export default class Home extends Component {
                                 </Link>
                             </Col>
                             <Col>
-                                <a href="mailto:parkers116@gmail.com">
+                                <Link to="/message">
                                     <Button variant="light" className="button">
                                         <span />
                                         <span />
@@ -220,7 +220,7 @@ export default class Home extends Component {
                                         <span />
                                         Leave a message
                                     </Button>
-                                </a>
+                                </Link>
                             </Col>
                         </Row>
                     </Jumbotron>

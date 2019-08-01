@@ -56,6 +56,9 @@ export default class NavigationBar extends Component {
                             <Link className="navlink" to="/contact">
                                 Contact
                             </Link>
+                            <Link className="navlink" to="/message">
+                                Message Board
+                            </Link>
                         </Nav>
                     </Navbar.Collapse>
                 </Navbar>

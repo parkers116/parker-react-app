@@ -4,6 +4,7 @@ import { Container } from 'react-bootstrap'
 import Home from './components/Home'
 import About from './components/About'
 import Contact from './components/Contact'
+import MessageBoard from './components/MessageBoard'
 import NotMatch from './components/NotMatch'
 import NavigationBar from './components/NavigationBar'
 import Footer from './components/Footer'
@@ -75,6 +76,7 @@ class App extends Component {
                                             <Route exact path="/" component={Home} />
                                             <Route exact path="/about" component={About} />
                                             <Route exact path="/contact" component={Contact} />
+                                            <Route exact path="/message" component={MessageBoard} />
                                             <Route component={NotMatch} />
                                         </Switch>
                                     </CSSTransition>

@@ -1,11 +1,13 @@
 const express = require('express')
 const bodyParser = require('body-parser')
 const mongoose = require('mongoose')
+const cors = require('cors')
 
 const app = express()
 const route = require('./routes/messageRoute')
 
 // Middleware on express
+app.use(cors())
 app.use(bodyParser.json())
 
 // Connect to database
@@ -19,12 +21,7 @@ mongoose
 app.use('/media', express.static(__dirname + '/media'))
 
 // route
-app.use('/message', route)
-
-//get
-app.get('/message/:id', (req, res) => {
-    res.send(req.params)
-})
+app.use('/api/message', route)
 
 const port = process.env.port || 3000
 app.listen(port, () => console.log(`Server starts on port ${port}`)) // template literals
