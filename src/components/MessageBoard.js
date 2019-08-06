@@ -1,4 +1,5 @@
 import React, { Component } from 'react'
+import ReactDOM from 'react-dom'
 import { Card, Row, Col, Button, Form } from 'react-bootstrap'
 import styled from 'styled-components'
 import MessageList from './MessageList'
@@ -93,10 +94,16 @@ export default class MessageBoard extends Component {
             numOfMessage: 0,
             messageData: null,
             isSubmit: true,
+            isPopUpSubmitWindow: false,
+            popUpWindowMsg: '',
         }
     }
 
     componentDidMount() {
+        this.getMsg()
+    }
+
+    getMsg() {
         // Fetch backend API to receive messages
         fetch(MESSAGE_API, {
             method: 'GET',
@@ -114,7 +121,7 @@ export default class MessageBoard extends Component {
     }
 
     sumbitMsg() {
-        console.log('Press submit button!')
+        //console.log('Press submit button!')
         fetch(MESSAGE_API, {
             method: 'POST',
             headers: {
@@ -122,16 +129,16 @@ export default class MessageBoard extends Component {
                 'Content-Type': 'application/json',
             },
             body: JSON.stringify({
-                userName: document.getElementById('formName').value,
-                topic: document.getElementById('formTopic').value,
-                msg: document.getElementById('formMsg').value,
+                userName: ReactDOM.findDOMNode(this.refs.formName).value,
+                topic: ReactDOM.findDOMNode(this.refs.formTopic).value,
+                msg: ReactDOM.findDOMNode(this.refs.formMsg).value,
             }),
         })
             .then(res => {
-                console.log(`${res.json()}`)
+                //console.log(`${res.json()}`)
                 this.setState({ isSubmit: true })
                 this.setState({ numOfMessage: this.state.numOfMessage + 1 })
-                console.log(`this.state.numOfMessage: ${this.state.numOfMessage}`)
+                //console.log(`this.state.numOfMessage: ${this.state.numOfMessage}`)
             })
             .catch(err => {
                 console.error(err)
@@ -141,22 +148,28 @@ export default class MessageBoard extends Component {
     }
 
     openPopUpContent() {
-        var message = document.getElementById('submit-message')
         if (this.state.isSubmit === true) {
-            message.innerHTML = 'Submit Success!'
+            this.setState({ popUpWindowMsg: 'Submit Success!' })
         } else {
-            message.innerHTML = 'Submit Fail!'
+            this.setState({ popUpWindowMsg: 'Submit Fail!' })
         }
-        var wrapper = document.getElementById('popUpWrapper')
-        wrapper.style.display = 'block'
+        this.setState({ isPopUpSubmitWindow: true })
     }
 
     closePopUpContent() {
-        var wrapper = document.getElementById('popUpWrapper')
-        wrapper.style.display = 'none'
+        this.setState({ isPopUpSubmitWindow: false })
+        if (this.state.isSubmit === true) {
+            //reset form
+            //...
+
+            //Fetch message again and update the state
+            this.getMsg()
+        }
     }
 
     render() {
+        const popUpWrapperstyle = { display: this.state.isPopUpSubmitWindow ? 'block' : 'none' }
+
         return (
             <Styles>
                 <div>
@@ -168,27 +181,27 @@ export default class MessageBoard extends Component {
                                     <Form className="form">
                                         <Form.Group controlId="formName">
                                             <Form.Label>Your Name</Form.Label>
-                                            <Form.Control />
+                                            <Form.Control ref="formName" />
                                         </Form.Group>
 
                                         <Form.Group controlId="formTopic">
                                             <Form.Label>Topic</Form.Label>
-                                            <Form.Control />
+                                            <Form.Control ref="formTopic" />
                                         </Form.Group>
                                         <Form.Group controlId="formMsg">
                                             <Form.Label>Message</Form.Label>
-                                            <Form.Control as="textarea" />
+                                            <Form.Control as="textarea" ref="formMsg" />
                                         </Form.Group>
                                         <div className="buttonWrapper">
                                             <Button variant="light" onClick={() => this.sumbitMsg()}>
                                                 Submit
                                             </Button>
-                                            <div id="popUpWrapper" className="pop-up-wrapper">
+                                            <div style={popUpWrapperstyle} className="pop-up-wrapper">
                                                 <div className="pop-up-content">
                                                     <span className="close" onClick={() => this.closePopUpContent()}>
                                                         &times;
                                                     </span>
-                                                    <p id="submit-message">Submit Success!</p>
+                                                    <p>{this.state.popUpWindowMsg}</p>
                                                 </div>
                                             </div>
                                         </div>
