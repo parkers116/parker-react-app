@@ -4,7 +4,7 @@ import { Card, Row, Col, Button, Form } from 'react-bootstrap'
 import styled from 'styled-components'
 import MessageList from './MessageList'
 
-const MESSAGE_API = 'http://localhost:3000/api/message'
+const MESSAGE_API = 'http://34.68.167.225:3000/api/message'
 
 const Styles = styled.div`
     text-align: center;
